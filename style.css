@@ -38,13 +38,16 @@ html, body{
     align-items: center;
     justify-content: center;
     border-right: 1px solid black;
-    font-size: 1.7vw;
+    font-size: clamp(14px, 1.7vw, 20px);
     color: #555556;
     font-weight: 500;
 }
 #nav h2:last-child{
     width: 10%;
     border-right: none;
+}
+#nav h3{
+    display: none;
 }
 #nav h1{
     height: 100%;
@@ -54,7 +57,7 @@ html, body{
     justify-content: center;
     font-weight: 800;
     margin-right: 10px;
-    font-size: 2.1vw;
+    font-size: clamp(35px, 2.2vw, 40px);;
     letter-spacing: -2px;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
@@ -64,20 +67,20 @@ html, body{
 #nav h1::after{
     content: "©";
     color: #535555;
-    font-size: 25px;
+    font-size: clamp(13px, 2.5vw, 14px);
     position: absolute;
-    top:24%;
-    right:18%;
+    top: clamp(3px, 8%, 25px);
+    right: clamp(-7px, -2%, 17px);
 }
 #nav h1::before{
     content: "model management";
     color: #535555;
     line-height: 5px;
     letter-spacing: 0px;
-    font-size: 12px;
+    font-size: clamp(8px, 0.5vw, 10px);
     position: absolute;
-    bottom: 24%;
-    right: 23%;
+    bottom: clamp(1px, 20%, 4px);
+    right: clamp(1px, 20%, 4px);
 }
 
 #center{
@@ -160,6 +163,7 @@ html, body{
     font-weight: 400;
 
 }
+
 #scroll{
     height: 40vh;
     width: 100%;
@@ -209,6 +213,7 @@ animation-direction: alternate;
     width: 100%;
     /* background-color: red; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1vw;
@@ -217,7 +222,7 @@ animation-direction: alternate;
 
 }
 #alphabet h5{
-    font-size: 1.6vw;
+    font-size: clamp(16px, 1.7vw, 20px);
     font-weight: 600;
     text-decoration:underline;
     text-transform: uppercase;
@@ -227,7 +232,7 @@ animation-direction: alternate;
 }
 #alphabet h6{
     padding: 1vh 2vw;
-    font-size: 1vw;
+      font-size: clamp(10px, 1vw, 12px);;
     font-weight: 500;
     font-style: italic;
     text-transform: uppercase;
@@ -267,7 +272,7 @@ animation-direction: alternate;
     
 }
 .p2-heading h2{
-    font-size: 2.8vw;
+      font-size: clamp(30px, 2.7vw, 40px);
     font-weight: 700;
     text-transform: uppercase;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -322,7 +327,7 @@ background-color: black;
     gap: 4vw;
 }
 #page2-part2-text h2{
-    font-size: 1.5vw;
+font-size: clamp(13px, 1.5vw, 15px);
     font-weight: 400;
     font-family: Helvetica, sans-serif;
     color: rgb(20, 20, 20);
@@ -997,3 +1002,280 @@ background-color: black;
         margin-top: 1.5vw;
 }
 
+@media (min-width:601px) and (max-width : 1220){
+
+
+    #nav{
+        
+        height: 8vh;
+        margin-top: 10px;
+    }
+    #nav h2{
+        display: none;
+        width: 20%;
+        /* height: 100%;
+        width: 24%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid black;
+        font-size: 1.7vw;
+        color: #555556;
+        font-weight: 500; */
+    }
+    /* #nav h2:last-child{
+        width: 10%;
+        border-right: none;
+    } */
+    #nav h1{
+   
+        width: 80%;
+        justify-content: flex-start;
+        font-weight: 800;
+        font-size: clamp(20px, 5vw, 30px);
+        
+    
+    }
+    #nav h1::after{
+        content: "©";
+        color: #535555;
+        font-size: 25px;
+        position: absolute;
+        top:24%;
+        right:18%;
+    }
+    #nav h1::before{
+        content: "model management";
+        color: #535555;
+        line-height: 5px;
+        letter-spacing: 0px;
+        font-size: 12px;
+        position: absolute;
+        bottom: 24%;
+        right: 23%;
+    }
+}
+
+
+
+@media (max-width:600px){
+    body{
+        overflow-x: hidden;
+    }
+    #nav{
+       padding: 2vw;
+        height: 8vh;
+        
+        margin-top: 10px;
+    
+    }
+    
+    #nav h2{
+        display: none;
+        width: 20%;
+        
+    }
+   
+        
+
+        #nav h3{
+            display: contents;
+            width: 20%;
+            height: 100%;
+            font-size: 8vw;
+            font-weight: 600;
+        }
+    #nav h1{
+   
+        width: 80%;
+        justify-content: flex-start;
+        font-weight: 800;
+        font-size: 6vw;
+        
+    
+    }
+    #nav h1::after{
+        /* content: "©";
+        color: #535555;
+        font-size: 25px;
+        position: absolute;
+        top:24%;
+        right:18%; */
+    }
+    #nav h1::before{
+        /* content: "model management";
+        color: #535555;
+        line-height: 5px;
+        letter-spacing: 0px;
+        font-size: 12px;
+        position: absolute;
+        bottom: 24%;
+        right: 23%; */
+    }
+    #center{
+      height: 50%;
+      padding: 0.6vw 0vw 0.5vw 0vw;  
+        
+    }
+    
+    #content{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        
+    }
+    #content video{
+        width: 100%;
+        height: 100%;
+    
+        object-fit: cover;
+    }
+    #overly{
+        height: 59%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        /* background-color: transparent; */
+        /* background-color: rgba(0, 0, 0, 0.144); */
+        padding: 3vw;
+        /* backdrop-filter: blur(1px); */
+    }
+    #overly-1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #ffff;
+        margin-bottom: 2vh;
+     
+    }
+    #overly-1 h1{
+        
+        font-size: 4vh;
+       
+    }
+  
+    #over-2 h4{
+        font-size: 4vw;
+    }
+    
+    #over-2 img{
+        height: 8vw;
+        font-weight: 400;
+    
+    }
+    
+    #scroll{
+    height: 20vh;
+   
+}
+#container{
+    width: 300%;
+   
+   
+}
+#scroll img{
+    height: 100%;
+    border-radius: 50%;
+    width: 12.3%;
+ 
+}
+#alphabet{
+    padding: 1vw 2vw;
+    height: 14vh;
+    gap: 0vw;
+}
+#alphabet h5{
+    font-size: clamp(11px, 1.7vw, 18px);
+    
+}
+#alphabet h6{
+    padding: 1vh 2vw;
+    font-size: clamp(8px, 1vw, 12px);
+    
+}
+
+#page2
+{
+    height: 40%;
+   
+    /* width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 2vw 5vw; */
+}
+#page2-part1{
+    height: 100%;
+    width: 50%;
+    background-image: url('https://sun9-25.userapi.com/impg/8_rXG9V-0mGtVyTEizgwiSEjenO72sTzesSjgA/37FZN6DfC0o.jpg?size=721x1080&quality=96&sign=8a8dccf18cfb1045310757c2fdee4a50&type=album');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.p2-heading{
+ 
+    padding-left: 7.3vw;
+    font-size: 3vw;
+    
+}
+.p2-heading h2{
+    font-size: 2.8vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#page2-part2{
+    /* display: grid;
+   grid-template-areas: "img img  "
+                            "para1 para2"; */
+    /* height: 80%;
+    width: 40%;
+    background-image: url('https://scontent.fpnq7-2.fna.fbcdn.net/v/t1.6435-9/51435095_10157190865151520_454901151918194688_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_ohc=bzCFfGu3KCcQ7kNvgHiKofJ&_nc_zt=23&_nc_ht=scontent.fpnq7-2.fna&_nc_gid=AfvLXynQl5V4KqAy4imjCa4&oh=00_AYCpmC7MmP1_cBVDQ17E4--_byOveBe0x2Sn3SNG2GcErg&oe=6767E0E2');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; */
+
+width: 40%;
+height: 70%;
+background-color: black;
+
+
+    
+}
+#page2-part2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+ 
+}
+
+#page2-part2-text{
+    padding-top: 1vw;
+    font-size: 1.5vw;
+    font-weight: 400;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+}
+#page2-part2-text h2{
+    font-size: 1.5vw;
+    font-weight: 400;
+    font-family: Helvetica, sans-serif;
+    color: rgb(20, 20, 20);
+
+}
+
+#page2-part2-text h3{
+    align-self: top;
+    font-size: 0.9vw;
+    font-weight: 400;
+    font-family: Helvetica, sans-serif;
+    color: rgb(37, 36, 36);
+
+}
+}
